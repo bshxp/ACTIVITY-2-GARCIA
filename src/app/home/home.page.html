@@ -1,0 +1,157 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu Content</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="logout()">
+          <ion-icon slot="icon-only" name="log-out"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+
+    <ion-card>
+      <ion-card-header>
+        <ion-icon name="person"></ion-icon>
+       <ion-card-title >Francis Garcia</ion-card-title>
+       <ion-card-subtitle>Fully Verified</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        Phone number: +63927-458-7645
+        <ion-chip>View Benefits</ion-chip>
+        <ion-chip >Visit Event</ion-chip>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button id="click-trigger">Recieve Money</ion-button>
+<ion-popover trigger="click-trigger" triggerAction="click">
+  <ng-template>
+    <ion-content class="ion-padding">Generating QR</ion-content>
+  </ng-template>
+</ion-popover>
+
+<ion-button id="context-menu-trigger">Send Money</ion-button>
+<ion-popover trigger="context-menu-trigger" triggerAction="context-menu">
+  <ng-template>
+    <ion-content class="ion-padding">Are you sure?</ion-content>
+  </ng-template>
+</ion-popover>
+
+<ion-button id="hover-trigger">Show History</ion-button>
+<ion-popover trigger="hover-trigger" triggerAction="hover">
+  <ng-template>
+    <ion-content class="ion-padding">Hello World!</ion-content>
+  </ng-template>
+</ion-popover>
+
+<ion-range labelPlacement="start" label="how fast is our app?"></ion-range>
+
+<ion-button id="open-loading">Bank Transfer</ion-button>
+<ion-loading trigger="open-loading" message="going to bank" duration="3000"></ion-loading>
+
+
+<ion-segment value="default">
+  <ion-segment-button value="default">
+    <ion-label>Settings</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="segment">
+    <ion-label>Banking</ion-label>
+  </ion-segment-button>
+</ion-segment>
+<br/>
+
+
+
+  </ion-content>
+</ion-menu>
+
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="logout()">
+          <ion-icon slot="icon-only" name="log-out"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+
+
+  
+  <ion-content class="ion-padding"> 
+
+    
+
+    <<h1 style="color: #007bff;">Currency Exchange App</h1>
+
+    <!-- !Currency Exchanger -->
+    <ion-item>
+      <ion-label position="floating">Amount</ion-label>
+      <ion-input type="number" [(ngModel)]="amount"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>From</ion-label>
+      <ion-select [(ngModel)]="selectedCurrencyFrom">
+        <ion-select-option *ngFor="let currency of currencies" [value]="currency.value">
+          {{ currency.label }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>To</ion-label>
+      <ion-select [(ngModel)]="selectedCurrencyTo">
+        <ion-select-option *ngFor="let currency of currencies" [value]="currency.value">
+          {{ currency.label }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button (click)="exchangeCurrencies()">Exchange</ion-button>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4" *ngFor="let currency of currencies">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>{{ currency.name }}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-label>{{ currency.rate }}</ion-label>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-content>
+
+
+
+<!--!FOOTER  -->
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-tabs>
+        <ion-tab-bar slot="bottom">
+          <ion-tab-button tab="home" routerLink="/home">
+            <ion-icon name="home"></ion-icon>
+          </ion-tab-button>
+          <ion-tab-button tab="calculator" routerLink="/calculator">
+            <ion-icon name="calculator"></ion-icon>
+          </ion-tab-button>
+          <ion-tab-button tab="settings" routerLink="/settings">
+            <ion-icon name="settings"></ion-icon>
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+    </ion-toolbar>
+  </ion-footer>
+  
+</div>

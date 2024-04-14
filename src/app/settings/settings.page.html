@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Settings
+    </ion-title>
+    
+
+  
+    
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <!-- Account Settings -->
+    <ion-item>
+      <ion-label>Account Settings</ion-label>
+      <ion-button slot="end" (click)="navigateTo('account')">Manage</ion-button>
+    </ion-item>
+
+    <!-- Notification Settings -->
+    <ion-item>
+      <ion-label>Notification Settings</ion-label>
+      <ion-button slot="end" (click)="navigateTo('notifications')">Manage</ion-button>
+    </ion-item>
+
+    <!-- Privacy Settings -->
+    <ion-item>
+      <ion-label>Privacy Settings</ion-label>
+      <ion-button slot="end" (click)="navigateTo('privacy')">Manage</ion-button>
+    </ion-item>
+
+    <!-- Theme Settings -->
+    <ion-item>
+      <ion-label>Theme Settings</ion-label>
+      <ion-button slot="end" (click)="navigateTo('theme')">Manage</ion-button>
+    </ion-item>
+
+    <!-- Language Settings -->
+    <ion-item>
+      <ion-label>Language Settings</ion-label>
+      <ion-button slot="end" (click)="navigateTo('language')">Manage</ion-button>
+    </ion-item>
+
+    <!-- Security Settings -->
+    <ion-item>
+      <ion-label>Security Settings</ion-label>
+      <ion-button slot="end" (click)="navigateTo('security')">Manage</ion-button>
+    </ion-item>
+
+    <!-- Notification Preferences -->
+    <ion-item>
+      <ion-label>Notification Preferences</ion-label>
+      <ion-button slot="end" (click)="navigateTo('notification-preferences')">Manage</ion-button>
+    </ion-item>
+
+    <!-- Data Usage Settings -->
+    <ion-item>
+      <ion-label>Data Usage Settings</ion-label>
+      <ion-button slot="end" (click)="navigateTo('data-usage')">Manage</ion-button>
+    </ion-item>
+
+    <!-- Sync Settings -->
+    <ion-item>
+      <ion-label>Sync Settings</ion-label>
+      <ion-button slot="end" (click)="navigateTo('sync')">Manage</ion-button>
+    </ion-item>
+
+    <!-- Accessibility Settings -->
+    <ion-item>
+      <ion-label>Accessibility Settings</ion-label>
+      <ion-button slot="end" (click)="navigateTo('accessibility')">Manage</ion-button>
+    </ion-item>
+
+    <!-- About App -->
+    <ion-item>
+      <ion-label>About App</ion-label>
+      <ion-button slot="end" (click)="navigateTo('about')">View</ion-button>
+    </ion-item>
+
+    <!-- Feedback and Support -->
+    <ion-item>
+      <ion-label>Feedback and Support</ion-label>
+      <ion-button slot="end" (click)="navigateTo('feedback')">Provide</ion-button>
+    </ion-item>
+  </ion-list>
+
+
+  
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="home" routerLink="/home">
+          <ion-icon name="home"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button tab="calculator" routerLink="/calculator">
+          <ion-icon name="calculator"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button tab="settings" routerLink="/settings">
+          <ion-icon name="settings"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

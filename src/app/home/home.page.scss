@@ -1,0 +1,36 @@
+/** Add this to your global.scss or styles.scss file **/
+
+
+
+ion-card {
+  background-color: rgb(26, 34, 143); /* Light gray background for cards */
+  border-radius: 10px; /* Rounded corners for cards */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for cards */
+}
+
+ion-button {
+  --background: #1a0761; /* Purple button background color */
+  --color: #fcfcfc; /* White button text color */
+  --border-radius: 10px; /* Rounded corners for buttons */
+}
+
+ion-content {
+  --ion-background-color: #fffffff3; /* White background for content area */
+}
+
+ion-footer {
+  --ion-background-color: #180dad; /* Purple footer background color */
+}
+
+ion-tabs {
+  --ion-color-primary: #6a0dad; /* Purple color for tabs */
+}
+
+ion-tab-button {
+  --color-selected: #000000; /* White color for selected tab */
+}
+
+ion-toolbar {
+  --background: #150a53; /* Purple toolbar background color */
+  --color: #ffffff; /* White toolbar text color */
+}
