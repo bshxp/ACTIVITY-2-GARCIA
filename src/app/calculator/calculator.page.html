@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Calculator
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Calculator Display -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-input id="display" [(ngModel)]="display" disabled></ion-input>
+      </ion-col>
+    </ion-row>
+    <!-- Calculator Buttons -->
+    <ion-row>
+      <ion-col size="3" *ngFor="let button of buttons">
+        <ion-button (click)="onButtonClick(button.value)" [class.orange]="button.color === 'orange'"
+          [class.red]="button.color === 'red'" size="small">
+          {{ button.value }}
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- History -->
+  <ion-list>
+    <ion-item *ngFor="let calc of history">{{ calc }}</ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="home" routerLink="/home">
+          <ion-icon name="home"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button tab="calculator" routerLink="/calculator">
+          <ion-icon name="calculator"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button tab="settings" routerLink="/settings">
+          <ion-icon name="settings"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
