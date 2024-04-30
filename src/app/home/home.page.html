@@ -1,0 +1,48 @@
+<ion-content>
+  <div class = "main_content_div">
+
+    <ion-buttons slot= "start" class="menu_btn">
+      <ion-menu-button color ="light"></ion-menu-button>
+      </ion-buttons>
+
+      <div id = "header-container">
+      <div class = "user_div">
+        <div class = "first_div">
+          
+          
+          <ion-label class = "welcome">Welcome to <br>my Portfolio</ion-label>
+          <ion-label class = "myHobbies">Graphics Designer</ion-label>
+        </div>
+        
+
+        </div>
+        
+      </div>
+
+      <div id="tabs">
+        
+        <ion-tabs>
+          <ion-tab-bar slot="bottom">
+            
+            <ion-tab-button tab="search" routerLink="/home">
+              <ion-icon name="home"></ion-icon>
+              Home
+            </ion-tab-button>
+
+            <ion-tab-button tab="library" (click)="dashboard()">
+              <ion-icon name="library"></ion-icon>
+              Dashboard
+            </ion-tab-button>
+
+          </ion-tab-bar>
+        </ion-tabs>
+      </div>
+
+      <div id = "content-container">
+      <div class = "name_container">
+        <div class = "name">GARCIA, Francis</div>
+      </div>
+    </div>      
+    </div>
+
+</ion-content>

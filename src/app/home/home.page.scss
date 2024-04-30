@@ -1,0 +1,31 @@
+.main_content_div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, darkblue, white); /* Gradient background */
+}
+
+/* Center the content horizontally */
+#header-container, #content-container, #dashboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for the labels */
+ion-label {
+  color: black; /* Font color */
+  text-align: center; /* Center the text */
+}
+
+/* Styling for the name */
+.name {
+  font-size: 24px; /* Adjust font size */
+}
+
+/* Styling for the dashboard button */
+.dashboard_btn {
+  margin-top: 20px; /* Adjust top margin */
+}

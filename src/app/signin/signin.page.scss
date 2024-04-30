@@ -1,0 +1,51 @@
+// Adjust the header title style
+#header {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  // Style the container
+  #container {
+    margin-top: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  // Style the input boxes
+  .box {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .box2 {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  // Style the sign-in and sign-up buttons
+  .signInbtn, .signUpbtn {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  
+  // Adjust button colors and font size
+  .signInbtn {
+    --background: #007bff; // Blue color
+    --color: white; // White text color
+    font-size: 16px;
+  }
+  
+  .signUpbtn {
+    --background: #28a745; // Green color
+    --color: white; // White text color
+    font-size: 16px;
+  }
+  
